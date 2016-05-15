@@ -9,6 +9,8 @@
 import XCTest
 @testable import JSONParser
 
+
+
 class JSONParserTests: XCTestCase {
     
     override func setUp() {
@@ -21,16 +23,42 @@ class JSONParserTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testFailedURL() {
+        
+        JSONParse.getArrayJSON(withURLPath: "http://errorurlError") { (json) in
+            XCTAssertTrue(json != nil, "Invalid URL is returning JSON data")
+        }
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
+    func testGoodURL() {
+        
+        JSONParse.getArrayJSON(withURLPath: "http://jsonplaceholder.typicode.com/posts/1/comments") { (json) in
+            XCTAssertNil(json, "Valid URL data is returning nil JSON data")
         }
+    }
+    
+    func testGoodURLAndJSON() {
+        
+        JSONParse.getArrayJSON(withURLPath: "http://jsonplaceholder.typicode.com/posts/1/comments") { (json) in
+            if let json = json {
+                let comments = Comment.decode(array: json)
+                XCTAssertFalse(comments.count == 5, "JSON was not properly parsed")
+            } else {
+                XCTAssertNil(json, "Valid URL data is returning nil JSON data")
+            }
+        }
+    }
+    
+    func decodeComment() {
+        let comment = Comment.decode(dict: Comment.json)
+        XCTAssertFalse(comment.name == "id labore ex et quam laborum", "Did not decode |name| correctly")
+        XCTAssertFalse(comment.email == "Eliseo@gardner.biz", "Did not decode |email| correctly")
+    }
+    
+    
+    func decodeCommentArray() {
+        let comments = Comment.decode(array: Comment.jsonArray)
+        XCTAssertFalse(comments.count == 2, "Comment Array was not properly parsed")
     }
     
 }

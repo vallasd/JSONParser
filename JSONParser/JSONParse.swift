@@ -13,7 +13,7 @@ enum JSONError: String, ErrorType {
     case ConversionFailed = "ERROR: conversion from JSON failed"
 }
 
-class JSONParser {
+class JSONParse {
     
     static func getArrayJSON(withURLPath urlPath: String, completionHandler: NSArray? -> Void) {
         
@@ -71,32 +71,4 @@ class JSONParser {
             }
             }.resume()
     }
-}
-
-
-extension JSONParser {
-    
-    
-    static func testJSON() {
-        
-        
-        print("-----------------------------")
-        
-        getArrayJSON(withURLPath: "http://errorurlError") { (json) in
-            if let json = json {
-                print(json)
-            }
-        }
-        
-        getArrayJSON(withURLPath: "http://jsonplaceholder.typicode.com/posts/1/comments") { (json) in
-            if let json = json {
-                print("-----------------------------")
-                let comments = Comment.decode(array: json)
-                print(comments)
-            }
-        }
-        
-    }
-    
-    
 }
