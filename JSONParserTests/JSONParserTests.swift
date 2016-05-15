@@ -37,14 +37,14 @@ class JSONParserTests: XCTestCase {
         }
     }
     
-    func testGoodURLAndJSON() {
+    func testGoodURLAndJSONDecode() {
         
         JSONParse.getArrayJSON(withURLPath: "http://jsonplaceholder.typicode.com/posts/1/comments") { (json) in
             if let json = json {
                 let comments = Comment.decode(array: json)
                 XCTAssertFalse(comments.count == 5, "JSON was not properly parsed")
             } else {
-                XCTAssertNil(json, "Valid URL data is returning nil JSON data")
+                XCTAssert(true, "Valid URL data is returning nil JSON data")
             }
         }
     }
