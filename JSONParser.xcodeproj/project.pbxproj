@@ -18,6 +18,12 @@
 		0312EF491CD0F42F00E334B6 /* JSONParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0312EF481CD0F42E00E334B6 /* JSONParse.swift */; };
 		0312EF4C1CD0F87D00E334B6 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0312EF4B1CD0F87D00E334B6 /* Comment.swift */; };
 		0312EF4E1CD1095E00E334B6 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0312EF4D1CD1095E00E334B6 /* Optional.swift */; };
+		033D92341CEB0D5200091C81 /* Magazine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033D92331CEB0D5200091C81 /* Magazine.swift */; };
+		033D92361CEB0D5C00091C81 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033D92351CEB0D5C00091C81 /* Article.swift */; };
+		037DE59E1CEB1BFE00A17305 /* MagazineTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DE59D1CEB1BFE00A17305 /* MagazineTVC.swift */; };
+		037DE5AA1CEB1DE300A17305 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DE5A91CEB1DE300A17305 /* ArticleCell.swift */; };
+		037DE5AD1CEBE1C100A17305 /* LinkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DE5AC1CEBE1C100A17305 /* LinkVC.swift */; };
+		03E098A71CEAFE290094C369 /* daringfireball.json in Resources */ = {isa = PBXBuildFile; fileRef = 03E098A61CEAFE290094C369 /* daringfireball.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +61,12 @@
 		0312EF481CD0F42E00E334B6 /* JSONParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParse.swift; sourceTree = "<group>"; };
 		0312EF4B1CD0F87D00E334B6 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Comment.swift; path = Model/Comment.swift; sourceTree = "<group>"; };
 		0312EF4D1CD1095E00E334B6 /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Optional.swift; path = Extensions/Optional.swift; sourceTree = "<group>"; };
+		033D92331CEB0D5200091C81 /* Magazine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Magazine.swift; sourceTree = "<group>"; };
+		033D92351CEB0D5C00091C81 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		037DE59D1CEB1BFE00A17305 /* MagazineTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MagazineTVC.swift; path = ViewControllers/MagazineTVC.swift; sourceTree = "<group>"; };
+		037DE5A91CEB1DE300A17305 /* ArticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArticleCell.swift; path = Cells/ArticleCell.swift; sourceTree = "<group>"; };
+		037DE5AC1CEBE1C100A17305 /* LinkVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinkVC.swift; path = ViewControllers/LinkVC.swift; sourceTree = "<group>"; };
+		03E098A61CEAFE290094C369 /* daringfireball.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = daringfireball.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +117,9 @@
 		0312EF161CD0D8C800E334B6 /* JSONParser */ = {
 			isa = PBXGroup;
 			children = (
+				037DE5AB1CEB1DE800A17305 /* Cells */,
+				037DE59C1CEB1BC200A17305 /* ViewControllers */,
+				03E098A81CEAFEBA0094C369 /* JSONFiles */,
 				0312EF4F1CD1099700E334B6 /* Extensions */,
 				0312EF4A1CD0F80100E334B6 /* Model */,
 				0312EF171CD0D8C800E334B6 /* AppDelegate.swift */,
@@ -141,6 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				0312EF4B1CD0F87D00E334B6 /* Comment.swift */,
+				033D92331CEB0D5200091C81 /* Magazine.swift */,
+				033D92351CEB0D5C00091C81 /* Article.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -151,6 +168,31 @@
 				0312EF4D1CD1095E00E334B6 /* Optional.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		037DE59C1CEB1BC200A17305 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				037DE59D1CEB1BFE00A17305 /* MagazineTVC.swift */,
+				037DE5AC1CEBE1C100A17305 /* LinkVC.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		037DE5AB1CEB1DE800A17305 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				037DE5A91CEB1DE300A17305 /* ArticleCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		03E098A81CEAFEBA0094C369 /* JSONFiles */ = {
+			isa = PBXGroup;
+			children = (
+				03E098A61CEAFE290094C369 /* daringfireball.json */,
+			);
+			name = JSONFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0312EF251CD0D8C800E334B6 /* LaunchScreen.storyboard in Resources */,
+				03E098A71CEAFE290094C369 /* daringfireball.json in Resources */,
 				0312EF221CD0D8C800E334B6 /* Assets.xcassets in Resources */,
 				0312EF1D1CD0D8C800E334B6 /* Main.storyboard in Resources */,
 			);
@@ -290,9 +333,14 @@
 				0312EF4C1CD0F87D00E334B6 /* Comment.swift in Sources */,
 				0312EF1A1CD0D8C800E334B6 /* ViewController.swift in Sources */,
 				0312EF201CD0D8C800E334B6 /* JSONParser.xcdatamodeld in Sources */,
+				033D92341CEB0D5200091C81 /* Magazine.swift in Sources */,
+				037DE5AD1CEBE1C100A17305 /* LinkVC.swift in Sources */,
+				033D92361CEB0D5C00091C81 /* Article.swift in Sources */,
 				0312EF491CD0F42F00E334B6 /* JSONParse.swift in Sources */,
 				0312EF181CD0D8C800E334B6 /* AppDelegate.swift in Sources */,
 				0312EF4E1CD1095E00E334B6 /* Optional.swift in Sources */,
+				037DE5AA1CEB1DE300A17305 /* ArticleCell.swift in Sources */,
+				037DE59E1CEB1BFE00A17305 /* MagazineTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

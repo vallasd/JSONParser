@@ -16,5 +16,16 @@ extension Optional {
         return ""
     }
     
+    var articles: [Article] {
+        if let array = self as? NSArray { return  Article.decode(array: array) }
+        print("Error: |\(self)| is not a NSArray")
+        return []
+    }
+    
+    var nsdictionary: NSDictionary {
+        if let dict = self as? NSDictionary { return  dict }
+        print("Error: |\(self)| is not a NSDictionary")
+        return [:]
+    }
     
 }
