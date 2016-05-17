@@ -75,8 +75,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mhl-yr-f6x">
-                                <rect key="frame" x="20" y="20" width="560" height="580"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mhl-yr-f6x">
+                                <rect key="frame" x="20" y="72" width="560" height="528"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
                         </subviews>
@@ -84,7 +84,7 @@
                         <constraints>
                             <constraint firstItem="boa-ii-wJO" firstAttribute="top" secondItem="Mhl-yr-f6x" secondAttribute="bottom" id="E3G-wc-q6m"/>
                             <constraint firstItem="Mhl-yr-f6x" firstAttribute="leading" secondItem="aLu-EP-ZBf" secondAttribute="leadingMargin" id="GX1-ji-STr"/>
-                            <constraint firstItem="Mhl-yr-f6x" firstAttribute="top" secondItem="mNv-NZ-a5j" secondAttribute="bottom" id="MSp-rk-2JK"/>
+                            <constraint firstItem="Mhl-yr-f6x" firstAttribute="top" secondItem="mNv-NZ-a5j" secondAttribute="bottom" constant="8" symbolic="YES" id="MSp-rk-2JK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Mhl-yr-f6x" secondAttribute="trailing" id="fm4-DR-apw"/>
                         </constraints>
                     </view>

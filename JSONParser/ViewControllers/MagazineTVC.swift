@@ -18,6 +18,8 @@ class MagazineTVC: UITableViewController {
         // Set delegate and datasource
         tableView.delegate = self
         tableView.dataSource = self
+        
+        title = magazine.title
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
